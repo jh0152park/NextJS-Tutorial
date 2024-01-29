@@ -28,3 +28,11 @@
     /app/about-us/company/sales/page.tsx
     above path is gonnna be "localhost:3000/about-us/company/sales/page" url
     ```
+
+## Not Found Routes
+
+Litreally will be used on all pages.
+
+In addition `page`, `layout`, `not-found` are special namee as reserved words
+
+-   `Link` component from `next/link` literally work as navigation
