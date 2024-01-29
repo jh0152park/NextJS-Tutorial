@@ -26,5 +26,5 @@
 4. the most important part is we have to create a new `page.tsx` file when we wanna show new page(not visible, literally can not show anything when `page.tsx` not exist inside of some folder) and also 100% we can create a new folder inside some folder at the same time
     ```
     /app/about-us/company/sales/page.tsx
-    above gonnna be localhost:3000/about-us/company/sales/page url
+    above path is gonnna be "localhost:3000/about-us/company/sales/page" url
     ```
