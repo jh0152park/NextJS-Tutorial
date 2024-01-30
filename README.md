@@ -320,3 +320,14 @@ export default function Loading() {
 -   **Also user cant see the network work like communicate with API at the netwrok tab on ther browser too**
 -   **And NextJS automatically shown to user our loading UI when we if created the `loading.tsx` file while backend working hard to get a data**
 -   **At the last momment, NextJS also will replace autometaically `loading.tsx` to `page.tsx` component when backend worked done**
+
+## ✨ Parallel Requests
+
+Literally doing many fetch at the same time
+
+This code will be fetched sequentially not a parallel. That mean is `getVideos` function will be called after done `getMovie` function worked
+
+```JS
+const movie = await getMovie(id);
+const videos = await getVideos(id);
+```
