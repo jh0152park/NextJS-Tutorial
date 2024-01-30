@@ -441,7 +441,7 @@ How can we handle the error what if occurred something error while we fetching d
 
 Maybe its fine if one single page dose not working well by somehow, But Its unacceptable broken, destroyed, exploded whole application by one single error
 
-So, we gonna created a new `error.tsx` file next to `page.tsx` file as below,
+So, we gonna created a new `error.tsx` file next to `page.tsx` file as below
 
 > app 📁  
 > &emsp;ㄴ(movies) 📁  
