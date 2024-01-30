@@ -233,8 +233,37 @@ export default function FirstFunction() {
 
 According to above code, fetching is always happened in the client side, that mean is browser sent request to api to get a data.
 
-Therefore, we can not put any should be protected things like `API KEYS`, also can not communicate with DB too. Because anyone can see that in the network tap, so it is so much dangerous😱
+Therefore, we can not put any should be protected things like `API KEYS`, also can not communicate with DB too. Because anyone can see that in the network tab, so it is so much dangerous😱
 
 That is why we doing just like that `Front App → API → DB → API → Front App`. Also we should be handle the loading status too, because our data was empty at the beginning
 
 **And probably Its would be better what if our NextJS can communicate with DB without API😎**
+
+## How to fetch data in server side?
+
+```JS
+export const metadata = {
+    title: "Home",
+};
+
+const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
+
+async function getMovies() {
+    return fetch(URL).then((response) => response.json());
+}
+
+export default async function Homepage() {
+    const movies = await getMovies();
+    return <div>{JSON.stringify(movies)}</div>;
+}
+```
+
+**🔥 SUPER AWESOME 🔥**
+
+We dont need any `useState`, `useEffect`
+
+Also we cant see anything at network tab too, Because dont used API.
+
+Literally fetch data just worked on server(backend) side!
+
+But loading state is still here, but server component remember what we fetched(cached) and that is why so fast to see data when we tried refresh again
