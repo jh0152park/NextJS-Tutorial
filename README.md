@@ -81,10 +81,12 @@ _🚿 Hydration is 수분공급, 즉 수분기없이 드라이한 HTML 정적 �
 <img align="center" src="https://cdn.shopify.com/s/files/1/2185/7175/files/fruit-strawberry-chips-2021-09-03-09-42-55-utc_1_480x480.jpg?v=1687821370" />
 </div>
 
-### 🔥 BUT THIS HYEDRATION IS DOSE NOT WORK FOR ALL COMPONENTS, SERVER SIDE RENDERING IS OCCUR FIRST FOR ALL EVERY COMPONENTS HOWEVER HYDRATED COMPONNETS BY CLIENT SIDE IS(TO MAKE INTERACTIVE AT CLIENT SIDE) ONLY SOME COMPONENTS WHO HAS `use client` KEYWORD AT THE TOP. 🔥
+### 🔥 BUT THIS HYEDRATION IS DOSE NOT WORK FOR ALL COMPONENTS, SERVER SIDE RENDERING IS OCCUR FIRST FOR ALL EVERY COMPONENTS, HOWEVER HYDRATED COMPONNETS BY CLIENT SIDE IS(TO MAKE INTERACTIVE AT CLIENT SIDE) ONLY SOME COMPONENTS WHO HAS `use client` KEYWORD AT THE TOP 🔥
 
-## `use client`
+## use client
 
 **`use client` keyword say to `NEXT JS FRAMEWORK` like hey man this component hvae to be interactive in the client, this component need to be hydrated!**
 
 ### 💥💥💥 VERY IMPORTANT!!! `use client` DOSE NOT MEAN RENDER ONLY IN THE CLIENT!!! IT MEAN IS RENDERED ON BACKNED AND HYDRATED & INTERACTIVE ON FRONTEND 💥💥💥
+
+Also it is make good performance to user too, Because user does not need to download all javascript files even though do not has any interactive components. That mean is no need to download again except for `use client` component.
