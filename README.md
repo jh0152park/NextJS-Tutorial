@@ -73,9 +73,9 @@ To sum up, SSR of NextJS is every components and pages are rendered by server si
 
 Kinda process of matching the javascript and HTML at client side after got rendered boring HTML by server side and javascript files from server
 
-arrived at some page like `/about-us` -> user can see boring HTML at the beginning -> user happy 🥰 because can see something UI instead of empty HTML -> Immediately loading framework -> framework initialization done -> finally every components are working fine, because boring HTML connected to JS files(React).
+arrived at some page like `/about-us` ➡ user can see boring HTML at the beginning ➡ user happy 🥰 because can see something UI instead of empty HTML ➡ Immediately loading framework ➡ framework initialization done ➡ finally every components are working fine, because boring HTML connected to JS files(React).
 
-Hydration is 수분공급, 즉 수분기없이 드라이한 HTML 정적 웹페이지에 물을 주어서 생기있게 만드는 작업이라고 생각하자🚿
+_🚿 Hydration is 수분공급, 즉 수분기없이 드라이한 HTML 정적 웹페이지에 물을 주어서 생기있게 만드는 작업이라고 생각하자 🚿_
 
 <div>
 <img align="center" src="https://cdn.shopify.com/s/files/1/2185/7175/files/fruit-strawberry-chips-2021-09-03-09-42-55-utc_1_480x480.jpg?v=1687821370" />
