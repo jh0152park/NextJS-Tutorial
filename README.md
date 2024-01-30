@@ -449,7 +449,7 @@ So, we gonna created a new `error.tsx` file next to `page.tsx` file as below,
 > &emsp;&emsp;ㄴmovies 📁&emsp;&emsp;  
 > &emsp;&emsp;&emsp;ㄴ[id] 📁 &emsp;&emsp;&ensp;  
 > &emsp;&emsp;&emsp;&emsp;ㄴpage.tsx  
-> &emsp;&emsp;&emsp;&emsp;loading.tsx  
+> &emsp;&emsp;&emsp;&emsp;ㄴloading.tsx  
 > &emsp;&emsp;&emsp;&emsp;ㄴerror.tsx
 
 Dont forget the name of file has to be `error.tsx` but the name of component is dose not matter
