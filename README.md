@@ -132,7 +132,7 @@ And `metadata` is can be merged from so many components, also can export the `me
 Static Route: /movies
 Dynamic Route: /movies/123 or /movies/111 like can put something dynamically into the url literally
 
-### ⚠️ what is different thing between `(movies)` and `movies` under app folder ??
+### ⚠️ what is different thing between `(movies)` and `movies` under app folder ?? ⚠️
 
 We called `route group` for some shape of `(folder name)`. And its dose not affect to our url path.
 
@@ -154,3 +154,30 @@ Because we can create a same `layout` under route group, obviously `page` and `c
 > &emsp;ㄴ(shop) 📁  
 > &emsp;&emsp;ㄴaccount 📁&ensp;&nbsp;→ localhost:3000/account  
 > &emsp;&emsp;&emsp;ㄴpage.tsx
+
+### Okay, So how we can make a dynamic url like `localhost:3000/movies/[id]` ??
+
+** Then just do that as below **
+
+`[folder name]` It means is can be located something behind the parent folder path
+
+> app 📁  
+> &emsp;ㄴlayout.tsx  
+> &emsp;ㄴnot-found.tsx  
+> &emsp;ㄴ(movies) 📁  
+> &emsp;&emsp;ㄴlayout.tsx  
+> &emsp;&emsp;ㄴmovies 📁&emsp;&emsp;→ localhost:3000/movies  
+> &emsp;&emsp;&emsp;ㄴ[id] 📁 &emsp;&emsp;&ensp;→ localhost:3000/movies/[id]  
+> &emsp;&emsp;&emsp;&emsp;ㄴpage.tsx
+
+** Then, how can we getting the `movie id`? Just like that **
+
+```JS
+export default function MovieDetail(props) {
+    console.log(props);
+    return <h1>Movies</h1>;
+}
+
+```
+
+And we can get a props on the console not a browser like it `{ params: { id: '1233' }, searchParams: {} }`
