@@ -199,3 +199,42 @@ export default function MovieDetail(props) {
 ```
 
 And we can get a props on the console not a browser like it `{ params: { id: '1233' }, searchParams: {} }`
+
+## ✨ Data Fetching
+
+### How to fetch data without 3rd party or external libraries?
+
+```JS
+"use client";
+
+import { useEffect, useState } from "react";
+
+export default function FirstFunction() {
+    const [isLoading, setIsLoading] = useState(true);
+    const [movies, setMovies] = useState();
+
+    async function getMovies() {
+        const responst = await fetch(
+            "https://nomad-movies.nomadcoders.workers.dev/movies"
+        );
+        const json = await responst.json();
+
+        setMovies(json);
+        setIsLoading(false);
+    }
+
+    useEffect(() => {
+        getMovies();
+    }, []);
+
+    return <div>{isLoading ? "Loading..." : JSON.stringify(movies)}</div>;
+}
+```
+
+According to above code, fetching is always happened in the client side, that mean is browser sent request to api to get a data.
+
+Therefore, we can not put any should be protected things like `API KEYS`, also can not communicate with DB too. Because anyone can see that in the network tap, so it is so much dangerous😱
+
+That is why we doing just like that `Front App → API → DB → API → Front App`. Also we should be handle the loading status too, because our data was empty at the beginning
+
+**And probably Its would be better what if our NextJS can communicate with DB without API😎**
