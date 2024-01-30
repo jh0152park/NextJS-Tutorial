@@ -126,3 +126,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 Its gonna to show up our `head` of index.html wharever we put it.
 
 And `metadata` is can be merged from so many components, also can export the `metadata` only `page` or `layout`. And should be located in the server component at the same time.
+
+## Dynamic Routes
+
+Static Route: /movies
+Dynamic Route: /movies/123 or /movies/111 like can put something dynamically into the url literally
+
+### ⚠️ what is different thing between `(movies)` and `movies` under app folder ??
+
+We called `route group` for some shape of `(folder name)`. And its dose not affect to our url path.
+
+Let assume we created a new folder like `movies`, its 100% should be a our url like `localhost:3000/movies`.
+
+But definitely dose not have any affect to your url path when we create a new route group folder like `(movies)`. Its just helpful us to more organize and more logical also can avoid write down same code again at the same time.
+
+Because we can create a same `layout` under route group, obviously `page` and `components` too as below.
+
+> app 📁  
+> &emsp;ㄴlayout.tsx  
+> &emsp;ㄴnot-found.tsx  
+> &emsp;ㄴ(marketing) 📁  
+> &emsp;&emsp;ㄴlayout.tsx  
+> &emsp;&emsp;ㄴabout 📁&emsp;&emsp;→ localhost:3000/about  
+> &emsp;&emsp;&emsp;ㄴpage.tsx  
+> &emsp;&emsp;ㄴblog 📁&emsp;&emsp;&ensp;→ localhost:3000/blog  
+> &emsp;&emsp;&emsp;ㄴpage.tsx  
+> &emsp;ㄴ(shop) 📁  
+> &emsp;&emsp;ㄴaccount 📁&ensp;&nbsp;→ localhost:3000/account  
+> &emsp;&emsp;&emsp;ㄴpage.tsx
