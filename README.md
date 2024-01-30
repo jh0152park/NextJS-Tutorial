@@ -77,4 +77,6 @@ arrived at some page like `/about-us` -> user can see boring HTML at the beginni
 
 Hydration is 수분공급, 즉 수분기없이 드라이한 HTML 정적 웹페이지에 물을 주어서 생기있게 만드는 작업이라고 생각하자🚿
 
-<img align="center" style={{width:500px, height:300px}} src="https://cdn.shopify.com/s/files/1/2185/7175/files/fruit-strawberry-chips-2021-09-03-09-42-55-utc_1_480x480.jpg?v=1687821370" />
+<div>
+<img align="center" src="https://cdn.shopify.com/s/files/1/2185/7175/files/fruit-strawberry-chips-2021-09-03-09-42-55-utc_1_480x480.jpg?v=1687821370" />
+</div>
