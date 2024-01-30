@@ -80,3 +80,7 @@ _🚿 Hydration is 수분공급, 즉 수분기없이 드라이한 HTML 정적 �
 <div>
 <img align="center" src="https://cdn.shopify.com/s/files/1/2185/7175/files/fruit-strawberry-chips-2021-09-03-09-42-55-utc_1_480x480.jpg?v=1687821370" />
 </div>
+
+### 🔥 BUT THIS HYEDRATION IS DOSE NOT WORK FOR ALL COMPONENTS, SERVER SIDE RENDERING IS OCCUR FIRST FOR ALL EVERY COMPONENTS HOWEVER HYDRATED COMPONNETS BY CLIENT SIDE IS(TO MAKE INTERACTIVE AT CLIENT SIDE) ONLY SOME COMPONENTS WHO HAS `"use client"` KEYWORD AT THE TOP. 🔥
+
+## `use client`
