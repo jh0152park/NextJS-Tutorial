@@ -103,7 +103,7 @@ Obviously that layout applies to subpath too, like `/about-us/company/jobs/sales
 
 ### Layout can nesting!
 
-Then how can I create a new special layout for specific component or page?
+Then how can We create a new special layout for specific component or page?
 
 ```JS
 // Lets assume we need to create a new layout for about-us page
@@ -120,3 +120,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     );
 }
 ```
+
+## Metadata
+
+Its gonna to show up our `head` of index.html wharever we put it.
+
+And `metadata` is can be merged from so many components, also can export the `metadata` only `page` or `layout`. And should be located in the server component at the same time.
