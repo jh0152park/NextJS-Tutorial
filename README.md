@@ -274,4 +274,35 @@ According to above example`(server side data fetch)` we can know our NextJS fram
 
 Also the different thing is between `Client Side Data Fetch` and `Server Side Data Fetch` is the location where user can see the loading state of data fetching.
 
-In case of `Client Side Data Fetch` user can see layout UI and can see the loading state at the screen, However in case of `Server Side Data Fetch` user can not see the loyout UI before the done data fetching because server still dost not ready to show up UI also can not see loading stathe at the screen too just can see the loading state at the tab of browser
+In case of `Client Side Data Fetch` user can see layout UI and can see the loading state at the screen, However in case of `Server Side Data Fetch` user can not see the any UI before the done data fetching because server still dost not ready to show up UI also can not see loading stathe at the screen too just can see the loading state at the tab of browser
+
+**Then how can we show up our Loading Component to user while backend working so hard?**
+
+**The answer is create a new `loading.tsx` component as below, then automatically user can see the loading component**
+
+```JS
+// app/(home)/page.tsx
+export const metadata = {
+    title: "Home",
+};
+
+const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
+
+async function getMovies() {
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    return fetch(URL).then((response) => response.json());
+}
+
+export default async function Homepage() {
+    const movies = await getMovies();
+    return <div>{JSON.stringify(movies)}</div>;
+}
+
+// app/(home)loadig.tsx
+export default function Loading() {
+    return <h1>Loading...</h1>;
+}
+```
+
+**Result as below**
+![Alt text](image.png)
