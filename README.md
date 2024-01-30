@@ -315,8 +315,8 @@ export default function Loading() {
 
 ![Alt text](image.png)
 
-**Let's organize, Our NextJS will getting data from the backend(server side) using an API**
-**So we dont need any `useState` or `useEffect` thigns to getting data at the frontend(client side)**
-**Also user cant see the network work like communicate with API at the netwrok tab on ther browser too**
-**And NextJS automatically shown to user our loading UI when we if created the `loading.tsx` file while backend working hard to get a data**
-**At the last momment, NextJS also will replace autometaically `loading.tsx` to `page.tsx` component when backend worked done**
+-   **Let's organize, Our NextJS will getting data from the backend(server side) using an API**
+-   **So we dont need any `useState` or `useEffect` thigns to getting data at the frontend(client side)**
+-   **Also user cant see the network work like communicate with API at the netwrok tab on ther browser too**
+-   **And NextJS automatically shown to user our loading UI when we if created the `loading.tsx` file while backend working hard to get a data**
+-   **At the last momment, NextJS also will replace autometaically `loading.tsx` to `page.tsx` component when backend worked done**
