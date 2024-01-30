@@ -138,7 +138,7 @@ We called `route group` for some shape of `(folder name)`. And its dose not affe
 
 Let assume we created a new folder like `movies`, its 100% should be a our url like `localhost:3000/movies`.
 
-But definitely dose not have any affect to your url path when we create a new route group folder like `(movies)`. Its just helpful us to more organize and more logical also can avoid write down same code again at the same time.
+But definitely dose not have any affect to our url path when we create a new route group folder like `(movies)`. Its just helpful us to more organize and more logical also can avoid write down same code again at the same time.
 
 Because we can create a same `layout` under route group, obviously `page` and `components` too as below.
 
@@ -157,7 +157,7 @@ Because we can create a same `layout` under route group, obviously `page` and `c
 
 ### Okay, So how we can make a dynamic url like `localhost:3000/movies/[id]` ??
 
-**Then just do that as below**
+**Then just do create a folders as below**
 
 `[folder name]` It means is can be located something behind the parent folder path
 
@@ -166,7 +166,7 @@ Because we can create a same `layout` under route group, obviously `page` and `c
 > &emsp;ㄴnot-found.tsx  
 > &emsp;ㄴ(movies) 📁  
 > &emsp;&emsp;ㄴlayout.tsx  
-> &emsp;&emsp;ㄴmovies 📁&emsp;&emsp;→ localhost:3000/movies  
+> &emsp;&emsp;ㄴmovies 📁&emsp;&emsp;→ localhost:3000/movies, but nothing happened because dose not have page.tsx file  
 > &emsp;&emsp;&emsp;ㄴ[id] 📁 &emsp;&emsp;&ensp;→ localhost:3000/movies/[id]  
 > &emsp;&emsp;&emsp;&emsp;ㄴpage.tsx
 
