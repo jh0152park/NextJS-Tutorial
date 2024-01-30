@@ -431,6 +431,6 @@ export default async function MovieDetail({
 }
 ```
 
-### So, we can not wait for render our components after done all of fetch functions. Just automatically shown loading component and shown component after loading done
+### So, we do not need to wait for render our components after done all of fetch functions. Just automatically shown loading component and shown component after loading done
 
 ### And we can shown our UI immediately to screen without `loading.tsx` because dont has any `async` things in the `page.tsx`. At the same time we can shwon and explain to user which specific part is should be a loading status of screen
