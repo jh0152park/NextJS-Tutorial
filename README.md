@@ -1,6 +1,6 @@
 # NextJS 14 Tutorial
 
-## How to istall by manually
+## ✨ How to istall by manually
 
 1. `npm init -y` then created `package.json` immediately
 2. fixed `ISC` to `MIT` about license of package.json file by just in case
@@ -18,7 +18,7 @@
     ```
 7. run `npm run dev` command
 
-## How to add new page in NextJS
+## ✨ How to add new page in NextJS
 
 1. create a new folder inside of app folder, that mean is that folder gonna be page might be
 2. create a new `page.tsx` file inside of folder what we created just now to be new page(or route)
@@ -29,7 +29,7 @@
     above path is gonnna be "localhost:3000/about-us/company/sales/page" url
     ```
 
-## Not Found Routes
+## ✨ Not Found Routes
 
 Litreally will be used on all pages.
 
@@ -37,7 +37,7 @@ In addition `page`, `layout`, `not-found` are special namee as reserved words
 
 -   `Link` component from `next/link` literally work as navigation
 
-## SSR vs CSR
+## ✨ SSR vs CSR
 
 Basically the way of render of react is CSR(Client Side Rendering). That mean is literally browser is doing rendering.
 
@@ -69,7 +69,7 @@ To sum up, SSR of NextJS is every components and pages are rendered by server si
 -   CSR(Client Side Rendering): Rendering by client's browser side after downloaded all javascript files
 -   SSR(Server Side Rendering): Rendering by server, literally. And NextJS do that at the beginning about every components and every pages, that is why we can see the UI even though disabled javascript on the browser
 
-## Hydration🚿💧🚰
+## ✨ Hydration🚿💧🚰
 
 Kinda process of matching the javascript and HTML at client side after got rendered boring HTML by server side and javascript files from server
 
@@ -83,7 +83,7 @@ _🚿 Hydration is 수분공급, 즉 수분기없이 드라이한 HTML 정적 �
 
 ### 🔥 BUT THIS HYEDRATION IS DOSE NOT WORK FOR ALL COMPONENTS, SERVER SIDE RENDERING IS OCCUR FIRST FOR ALL EVERY COMPONENTS, HOWEVER HYDRATED COMPONNETS BY CLIENT SIDE IS(TO MAKE INTERACTIVE AT CLIENT SIDE) ONLY SOME COMPONENTS WHO HAS `use client` KEYWORD AT THE TOP 🔥
 
-## use client
+## ✨ use client
 
 **`use client` keyword say to `NEXT JS FRAMEWORK` like hey man this component hvae to be interactive in the client, this component need to be hydrated!**
 
@@ -91,7 +91,7 @@ _🚿 Hydration is 수분공급, 즉 수분기없이 드라이한 HTML 정적 �
 
 Also it is make good performance to user too, Because user does not need to download all javascript files even though do not has any interactive components. That mean is no need to download again except for `use client` component.
 
-## Layout
+## ✨ Layout
 
 A system for recycling components used in many places. Like a `header`, `sidebar`, `search bar`, `etc...`.
 
@@ -121,7 +121,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 }
 ```
 
-## Metadata
+## ✨ Metadata
 
 Its gonna to show up our `head` of index.html wharever we put it.
 
@@ -145,7 +145,7 @@ export const metadata = {
 };
 ```
 
-## Dynamic Routes
+## ✨ Dynamic Routes
 
 Static Route: /movies
 Dynamic Route: /movies/123 or /movies/111 like can put something dynamically into the url literally
