@@ -90,3 +90,33 @@ _🚿 Hydration is 수분공급, 즉 수분기없이 드라이한 HTML 정적 �
 ### 💥💥💥 VERY IMPORTANT!!! `use client` DOSE NOT MEAN RENDER ONLY IN THE CLIENT!!! IT MEAN IS RENDERED ON BACKNED AND HYDRATED & INTERACTIVE ON FRONTEND 💥💥💥
 
 Also it is make good performance to user too, Because user does not need to download all javascript files even though do not has any interactive components. That mean is no need to download again except for `use client` component.
+
+## Layout
+
+A system for recycling components used in many places. Like a `header`, `sidebar`, `search bar`, `etc...`.
+
+Its pretty annoying when we have to copy and paste same component to so many different places🤮
+
+And we can make some special `layout` for specific components or page, Because probably we need to build some different layout for diffrent place of user status. Like `dashboard`, `main page`, `my page`, `etc...`
+
+Obviously that layout applies to subpath too, like `/about-us/company/jobs/sales/page.tsx`
+
+### Layout can nesting!
+
+Then how can I create a new special layout for specific component or page?
+
+```JS
+// Lets assume we need to create a new layout for about-us page
+// 1. Copy the layout.tsx into about-us folder
+// 2. Delete the metadata
+// 3. Writedown the some code as below!
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+    return (
+        <div>
+            {children}
+            This is aboutus page loyout
+        </div>
+    );
+}
+```
