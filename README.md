@@ -328,8 +328,15 @@ Literally doing many fetch at the same time
 This code will be fetched sequentially not a parallel. That mean is `getVideos` function will be called after done `getMovie` function worked
 
 ```JS
-const movie = await getMovie(id);
+export default async function MovieDetail({
+    params: { id },
+}: {
+    params: { id: string };
+}) {
+    const movie = await getMovie(id);
 const videos = await getVideos(id);
+    return <h1>{movie.title}</h1>;
+}
 ```
 
 So, instead of doing abovie thing we will use `Promise.all`. If we using `Promise.all` then will await `getMovie` and `getVideos` both function.
@@ -337,5 +344,16 @@ So, instead of doing abovie thing we will use `Promise.all`. If we using `Promis
 Here is a simple example
 
 ```JS
-const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)]);
+export default async function MovieDetail({
+    params: { id },
+}: {
+    params: { id: string };
+}) {
+    const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)]);
+    return <h1>{movie.title}</h1>;
+}
 ```
+
+## ✨ Suspense
+
+Honestly, `suspense` is not a NextJS feature its part of `React`. However its also sooo cool
