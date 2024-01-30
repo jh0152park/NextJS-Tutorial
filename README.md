@@ -267,3 +267,11 @@ Also we cant see anything at network tab too, Because dont used API.
 Literally fetch data just worked on server(backend) side!
 
 But loading state is still here, but server component remember what we fetched(cached) and that is why so fast to see data when we tried refresh again
+
+## ✨ Loading Component
+
+According to above example`(server side data fetch)` we can know our NextJS framework will gave cahced data, And that is why we can see the data so fast when we tried refresh again.
+
+Also the different thing is between `Client Side Data Fetch` and `Server Side Data Fetch` is the location where user can see the loading state of data fetching.
+
+In case of `Client Side Data Fetch` user can see layout UI and can see the loading state at the screen, However in case of `Server Side Data Fetch` user can not see the loyout UI before the done data fetching because server still dost not ready to show up UI also can not see loading stathe at the screen too just can see the loading state at the tab of browser
