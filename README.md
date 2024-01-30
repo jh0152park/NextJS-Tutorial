@@ -441,9 +441,7 @@ How can we handle the error what if occurred something error while we fetching d
 
 Maybe its fine if one single page dose not working well by somehow, But Its unacceptable broken, destroyed, exploded whole application by one single error
 
-So, we gonna created a new `error.tsx` file next to `page.tsx` file as below, Dont forget the name of file has to be `error.tsx` but the name of component is dose not matter
-
-Also write down `use client` at the top too, And keep it mind the `error.tsx` file just protect only `/movies/[id]` component
+So, we gonna created a new `error.tsx` file next to `page.tsx` file as below,
 
 > app 📁  
 > &emsp;ㄴ(movies) 📁  
@@ -451,8 +449,14 @@ Also write down `use client` at the top too, And keep it mind the `error.tsx` fi
 > &emsp;&emsp;ㄴmovies 📁&emsp;&emsp;  
 > &emsp;&emsp;&emsp;ㄴ[id] 📁 &emsp;&emsp;&ensp;  
 > &emsp;&emsp;&emsp;&emsp;ㄴpage.tsx  
-> &emsp;&emsp;&emsp;&emsp;loading.tsx  
+> &emsp;&emsp;&emsp;&emsp;ㄴloading.tsx  
 > &emsp;&emsp;&emsp;&emsp;ㄴerror.tsx
+
+Dont forget the name of file has to be `error.tsx` but the name of component is dose not matter
+
+Also write down `use client` at the top too, And keep it mind the `error.tsx` file just protect only `/movies/[id]` component
+
+**error.tsx**
 
 ```JS
 "use client";
