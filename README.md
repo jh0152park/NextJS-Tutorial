@@ -434,3 +434,30 @@ export default async function MovieDetail({
 ### So, we do not need to wait for render our components after done all of fetch functions. Just automatically shown loading component and shown component after loading done
 
 ### And we can shown our UI immediately to screen without `loading.tsx` because dont has any `async` things in the `page.tsx`. At the same time we can shwon and explain to user which specific part is should be a loading status of screen
+
+## ✨ Error Handling
+
+How can we handle the error what if occurred something error while we fetching data?
+
+Maybe its fine if one single page dose not working well by somehow, But Its unacceptable broken, destroyed, exploded whole application by one single error
+
+So, we gonna created a new `error.tsx` file next to `page.tsx` file as below, Dont forget the name of file has to be `error.tsx` but the name of component is dose not matter
+
+Also write down `use client` at the top too, And keep it mind the `error.tsx` file just protect only `/movies/[id]` component
+
+> app 📁  
+> &emsp;ㄴ(movies) 📁  
+> &emsp;&emsp;ㄴlayout.tsx  
+> &emsp;&emsp;ㄴmovies 📁&emsp;&emsp;  
+> &emsp;&emsp;&emsp;ㄴ[id] 📁 &emsp;&emsp;&ensp;  
+> &emsp;&emsp;&emsp;&emsp;ㄴpage.tsx  
+> &emsp;&emsp;&emsp;&emsp;loading.tsx  
+> &emsp;&emsp;&emsp;&emsp;ㄴerror.tsx
+
+```JS
+"use client";
+
+export default function Error() {
+    return <h1>Something Broken</h1>;
+}
+```
