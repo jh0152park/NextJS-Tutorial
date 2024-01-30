@@ -334,14 +334,14 @@ export default async function MovieDetail({
     params: { id: string };
 }) {
     const movie = await getMovie(id);
-const videos = await getVideos(id);
+    const videos = await getVideos(id);
     return <h1>{movie.title}</h1>;
 }
 ```
 
 So, instead of doing abovie thing we will use `Promise.all`. If we using `Promise.all` then will await `getMovie` and `getVideos` both function.
 
-Here is a simple example
+**Here is a simple example**
 
 ```JS
 export default async function MovieDetail({
@@ -357,3 +357,80 @@ export default async function MovieDetail({
 ## ✨ Suspense
 
 Honestly, `suspense` is not a NextJS feature its part of `React`. However its also sooo cool
+
+According to previous example as below, There is have something problem
+
+The problem is our UI is can not be rendered before worked done of both fetch functions
+
+```JS
+export default async function MovieDetail({
+    params: { id },
+}: {
+    params: { id: string };
+}) {
+    const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)]);
+    return <h1>{movie.title}</h1>;
+}
+```
+
+So, we gonna separate above fetch functions and just shown to user when got ready each other function
+
+1. Separate and create a single working component
+2. Just call all of diffrent functions in the single component(page.tsx)
+3. Wrap the fetch single component by `Suspense` component from `React`
+4. Just shown automatically each after down data fetch
+
+**Here is a simple example**
+
+```JS
+// app/components/movie-info.tsx
+import { API_URL } from "../app/(home)/page";
+
+export async function getMovie(id: string) {
+    return fetch(`${API_URL}/${id}`).then((response) => response.json());
+}
+
+export default async function MovieInfo({ id }: { id: string }) {
+    const movie = await getMovie(id);
+    return <h5>{JSON.stringify(movie)}</h5>;
+}
+
+// app/components/movie-videos.tsx
+import { API_URL } from "../app/(home)/page";
+
+export async function getVideos(id: string) {
+    return fetch(`${API_URL}/${id}/videos`).then((response) => response.json());
+}
+
+export default async function MovieVideos({ id }: { id: string }) {
+    const videos = await getVideos(id);
+    return <h5>{JSON.stringify(videos)}</h5>;
+}
+
+// app/(movies)/movies/[id]/page.tsx
+import { Suspense } from "react";
+import MovieInfo from "../../../../components/movie-info";
+import MovieVideos from "../../../../components/movie-videos";
+
+export default async function MovieDetail({
+    params: { id },
+}: {
+    params: { id: string };
+}) {
+    return (
+        <div>
+            <Suspense fallback={<h1>Loading movie info</h1>}>
+                <MovieInfo id={id} />
+            </Suspense>
+
+            <Suspense fallback={<h1>Loading movie video</h1>}>
+                <MovieVideos id={id} />
+            </Suspense>
+        </div>
+    );
+}
+```
+
+### So, we can not wait for render our components after done all of fetch functions. Just automatically shown loading component and shown component after loading done
+
+### And we can shown our UI immediately to screen without `loading.tsx` because dont has any `async` things in the `page.tsx`. At the same time we can shwon and explain to user which specific part is should be a loading status of screen
