@@ -331,3 +331,11 @@ This code will be fetched sequentially not a parallel. That mean is `getVideos` 
 const movie = await getMovie(id);
 const videos = await getVideos(id);
 ```
+
+So, instead of doing abovie thing we will use `Promise.all`. If we using `Promise.all` then will await `getMovie` and `getVideos` both function.
+
+Here is a simple example
+
+```JS
+const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)]);
+```
