@@ -157,7 +157,7 @@ Because we can create a same `layout` under route group, obviously `page` and `c
 
 ### Okay, So how we can make a dynamic url like `localhost:3000/movies/[id]` ??
 
-** Then just do that as below **
+**Then just do that as below**
 
 `[folder name]` It means is can be located something behind the parent folder path
 
@@ -170,7 +170,7 @@ Because we can create a same `layout` under route group, obviously `page` and `c
 > &emsp;&emsp;&emsp;ㄴ[id] 📁 &emsp;&emsp;&ensp;→ localhost:3000/movies/[id]  
 > &emsp;&emsp;&emsp;&emsp;ㄴpage.tsx
 
-** Then, how can we getting the `movie id`? Just like that **
+**Then, how can we getting the `movie id`? Just like that**
 
 ```JS
 export default function MovieDetail(props) {
