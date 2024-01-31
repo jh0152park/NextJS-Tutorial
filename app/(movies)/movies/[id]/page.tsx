@@ -26,3 +26,5 @@ export default async function MovieDetail({ params: { id } }: IProps) {
         </div>
     );
 }
+
+export const runtime = "edge";
