@@ -473,3 +473,9 @@ export default function Error() {
     return <h1>Something Broken</h1>;
 }
 ```
+
+## ✨ Prefectch
+
+Literally prefetch before when I go to some page.
+
+That feature can make our web site look like more faster however it is also can be waste resources at the same time like a community or comment section, because pre loaded the data before when user arrived.
