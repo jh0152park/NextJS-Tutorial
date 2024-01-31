@@ -143,6 +143,14 @@ export const metadata: Metadata = {
 export const metadata = {
     title: "About Us",
 };
+
+// dynamic metadata
+export async function generateMetadata({ params: { id } }: IProps) {
+    const movie = await getMovie(id);
+    return {
+        title: movie.title,
+    };
+}
 ```
 
 ## ✨ Dynamic Routes
