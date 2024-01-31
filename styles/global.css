@@ -124,6 +124,7 @@ table {
 }
 
 body {
+    padding-top: 150px;
     background-color: #121210;
     color: #e2e2e2;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
