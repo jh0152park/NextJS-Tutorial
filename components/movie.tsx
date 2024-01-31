@@ -9,9 +9,11 @@ interface IMovieProps {
 
 export default function Movie({ title, id, poster_path }: IMovieProps) {
     return (
-        <div className={style.movie}>
-            <img src={poster_path} alt={title} />
-            <Link href={`/movies/${id}`}>{title}</Link>
-        </div>
+        <Link href={`/movies/${id}`}>
+            <div className={style.movie}>
+                <img src={poster_path} alt={title} />
+                <h3>{title}</h3>
+            </div>
+        </Link>
     );
 }
