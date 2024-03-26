@@ -1,4 +1,4 @@
-# NextJS 14 Tutorial
+# NEXT.JS 14 Tutorial
 
 ## ✨ How to istall by manually
 
